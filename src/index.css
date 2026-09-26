@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Recipe Circle design tokens. All colours are HSL. */
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 24 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 12%;
+
+    --primary: 16 84% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 34 44% 92%;
+    --secondary-foreground: 24 20% 20%;
+
+    --muted: 34 30% 94%;
+    --muted-foreground: 24 6% 44%;
+
+    --accent: 142 45% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 18% 88%;
+    --input: 30 18% 88%;
+    --ring: 16 84% 52%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 24 12% 8%;
+    --foreground: 40 33% 96%;
+    --card: 24 12% 11%;
+    --card-foreground: 40 33% 96%;
+    --popover: 24 12% 11%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 16 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 24 12% 18%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 24 12% 18%;
+    --muted-foreground: 34 12% 64%;
+    --accent: 142 45% 46%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 12% 20%;
+    --input: 24 12% 20%;
+    --ring: 16 84% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
